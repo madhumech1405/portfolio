@@ -1,18 +1,63 @@
 import React from 'react'
+import { AiOutlineFacebook, AiOutlineLinkedin, AiOutlineTwitter } from "react-icons/ai";
+import AboutImg from '../assests/about.png'
+
 export default function Contact() {
-    const config={
-        email:'madhumech1405@gmail.com',
-        phone:'+91-8838489260'
+  const config={
+    subtitle:"im full stack developer",
+    social:{
+      twitter:'https://twitter.com/madhusudhananJ5',
+      facebook:"https://www.facebook.com/profile.php?id=100010157941391",
+      linkedin:"https://www.linkedin.com/in/madhusudhanan-j-13907a199/"
     }
+  }
   return (
-    <section  id='contact' className='flex flex-col bg-primary px-5 py-32 text-white' id='contact'>
-        <div className='flex flex-col items-center'>
-            <h1 className='text-4xl border-b-4 border-secondary mb-5 w-[140px] font-bold'>Contact</h1>
-            <p className='pb-5'>if you want to discuss more in detail,please contact me</p>
-            <p className='py-2'><span className='font-bold'>Email :</span>{config.email}</p>
-            <p className='py-2'><span className='font-bold'>phone:</span>{config.phone}</p>
-        </div>
+    <section className='flex  flex-col md:flex-row  bg-primary  px-5'>
+
+      <div className='py-5 md:w-1/2 justify-center md:justify-end' >
       
+        <div className="flex ">
+
+          <a href={config.social.facebook}><AiOutlineFacebook  size={40}/></a>   
+      <a href={config.social.twitter}className="pr-5 hover:text-white"  ><AiOutlineTwitter size={40} /> </a>
+      <a href={config.social.facebookn} className="hover:text-white"><AiOutlineLinkedin size={40}/> </a>
+    </div>
+
+    <div className='px3 mb-3' >
+      
+  
+        <small className=' text-bold'>OR</small>
+        
+      </div>
+      <div className='px-5 py-1'>
+      
+        <input className='mb-3' type='text' name="name" placeholder='write your name'/>
+
+      </div>
+      <div>
+        <input className="mb-3" type='email' name='email' placeholder='enter you email '/>
+      </div>
+      <div>
+        <input className='mb3 'type='mag ' placeholder='witre your massgge'/>
+      
+      </div>
+      <div px-3  py-5>
+        <button className='btn' type='sumbit'>send massgge</button>
+      </div>
+      </div>
+
+      <div className="md:1/2 py-5 ">
+      <img src={AboutImg} />
+      </div>
+      
+    
+
+
+    
+ 
+  
+
+
     </section>
   )
 }
